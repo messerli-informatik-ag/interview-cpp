@@ -1,26 +1,9 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include <vector>
+
+#include "Fibonacci.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
-
-class Fibonacci {
-
-public:
-    /**
-     * \brief Calculate the n-th Fibonacci Number
-     * a_0 = 0
-     * a_1 = 1
-     * a_n = a_n-1 + a_n-2
-     */
-    static int Get(int n)
-    {
-        return 0;
-    }
-
-private:
-};
-
 
 namespace InterviewSpecficiation {
 TEST_CLASS(FibonacciTest) {
@@ -28,16 +11,16 @@ public:
 
     TEST_METHOD(GivenTheNumberNFibonacciReturnsTheNthFibonacciNumber)
     {
-        Assert::AreEqual(Fibonacci::Get(0), 0);
-        Assert::AreEqual(Fibonacci::Get(1), 1);
-        Assert::AreEqual(Fibonacci::Get(2), 1);
-        Assert::AreEqual(Fibonacci::Get(3), 2);
-        Assert::AreEqual(Fibonacci::Get(4), 3);
-        Assert::AreEqual(Fibonacci::Get(5), 5);
-        Assert::AreEqual(Fibonacci::Get(6), 8);
-        Assert::AreEqual(Fibonacci::Get(7), 13);
-        Assert::AreEqual(Fibonacci::Get(8), 21);
-        Assert::AreEqual(Fibonacci::Get(9), 34);
+        Assert::AreEqual(0, Fibonacci::Get(0));
+        Assert::AreEqual(1, Fibonacci::Get(1));
+        Assert::AreEqual(1, Fibonacci::Get(2));
+        Assert::AreEqual(2, Fibonacci::Get(3));
+        Assert::AreEqual(3, Fibonacci::Get(4));
+        Assert::AreEqual(5, Fibonacci::Get(5));
+        Assert::AreEqual(8, Fibonacci::Get(6));
+        Assert::AreEqual(13, Fibonacci::Get(7));
+        Assert::AreEqual(21, Fibonacci::Get(8));
+        Assert::AreEqual(34, Fibonacci::Get(9));
     }
 
     //TEST_METHOD(GivenALargeNumberNFibonacciReturnsTheNthFibonacciNumber)
